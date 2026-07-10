@@ -19,14 +19,14 @@ classifiers = [
 ]
 
 setup(
-    name='gbrf',
-    version='2.0.0',
+    name='hybridgbrf',
+    version='1.0.0',
     description='Gradient Boosted Random Forest - A hybrid ML algorithm',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/abhi1628/gbrf',
+    url='https://github.com/abhi1628/hybridgbrf',
     author='Abhishek Singh',
-    author_email='abhishek.ec@global.org.in',
+    author_email='abhisheksingh.cs@global.org.in',
     license='MIT',
     classifiers=classifiers,
     keywords='machine learning gradient boosting random forest hybrid ensemble',
