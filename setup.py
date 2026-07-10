@@ -1,32 +1,47 @@
-from setuptools import setup, find_packages, setuptools
+from setuptools import setup, find_packages
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
 classifiers = [
-  'Development Status :: 5 - Production/Stable',
-  'Intended Audience :: Education',
-  'Operating System :: OS Independent',
-  'License :: OSI Approved :: MIT License',
-  'Programming Language :: Python :: 3',
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'Operating System :: OS Independent',
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Topic :: Software Development :: Libraries :: Python Modules',
 ]
 
 setup(
-  name='gbrf',
-  version='1.0.7',
-  description='Gradient Boosted Random Forest Classifier (gbrf)',
-  long_description_content_type='text/markdown',
-  long_description=open('README.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),
-  url='',
-  author='Abhishek Singh',
-  author_email='abhishek.ec@global.org.in',
-  license='MIT',
-  classifier=classifiers,
-  keywords='machine learning',
-  packages=setuptools.find_packages(),
-  install_requires=["numpy>=1.20.0",
-        "scikit-learn>=0.24.0",
+    name='gbrf',
+    version='2.0.0',
+    description='Gradient Boosted Random Forest - A hybrid ML algorithm',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url='https://github.com/abhi1628/gbrf',
+    author='Abhishek Singh',
+    author_email='abhishek.ec@global.org.in',
+    license='MIT',
+    classifiers=classifiers,
+    keywords='machine learning gradient boosting random forest hybrid ensemble',
+    packages=find_packages(),
+    python_requires='>=3.8',
+    install_requires=[
+        "numpy>=1.21.0",
+        "scikit-learn>=1.0.0",
         "joblib>=1.1.0",
-        "pandas>=1.2.0",
-        "matplotlib>=3.3.4",]
+        "pandas>=1.3.0",
+        "matplotlib>=3.4.0",
+    ],
+    extras_require={
+        'dev': ['pytest>=6.0', 'pytest-cov', 'flake8'],
+    },
+    include_package_data=True,
+    zip_safe=False,
 )
