@@ -27,7 +27,7 @@
 ## Installation
 
 ```bash
-pip install gbrf
+pip install hybridgbrf
 ```
 
 ### Requirements
@@ -45,7 +45,7 @@ pip install gbrf
 ### Regression
 
 ```python
-from gbrf import GRFRegressor
+from hybridgbrf import GRFRegressor
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
 
@@ -79,7 +79,7 @@ model.plot_training_history(save_path="history.png")
 ### Classification
 
 ```python
-from gbrf import GRFClassifier
+from hybridgbrf import GRFClassifier
 from sklearn.datasets import make_classification
 
 X, y = make_classification(n_samples=1000, n_features=20, n_classes=2, random_state=42)
@@ -172,7 +172,7 @@ Key Difference: Single Tree vs Random Forest per iteration
 
 ```python
 from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from gbrf import GRFRegressor
+from hybridgbrf import GRFRegressor
 from sklearn.datasets import fetch_california_housing
 
 X, y = fetch_california_housing(return_X_y=True)
@@ -189,9 +189,9 @@ gb.fit(X_train, y_train)
 print(f"GB R^2: {gb.score(X_test, y_test):.4f}")
 
 # GBRF (Ours)
-gbrf = GRFRegressor(n_iterations=50, n_estimators_per_iteration=10, random_state=42)
-gbrf.fit(X_train, y_train)
-print(f"GBRF R^2: {gbrf.score(X_test, y_test):.4f}")
+hgbrf = GRFRegressor(n_iterations=50, n_estimators_per_iteration=10, random_state=42)
+hgbrf.fit(X_train, y_train)
+print(f"GBRF R^2: {hgbrf.score(X_test, y_test):.4f}")
 ```
 
 ---
