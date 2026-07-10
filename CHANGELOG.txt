@@ -1,6 +1,6 @@
 Change Log
 ==========
 
-1.0.7(18/03/2023)
+2.0.0(10/07/2026)
 ------------------
-- Seventh Release
+- Eighth Release
